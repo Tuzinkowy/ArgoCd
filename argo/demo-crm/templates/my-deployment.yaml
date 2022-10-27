@@ -4,7 +4,7 @@ metadata:
   name: demo-crm
   namespace: default
   labels:
-    app: demo-crem
+    app: demo-crm
 spec:
   replicas: {{ .Values.demoCrm.replicasCount }}
   selector:
