@@ -16,6 +16,5 @@ demoCrm:
   imageTag: "latest"
   replicasCount: 2
   appPort: 3000
-
-
+  namespaceOverride: default
 
