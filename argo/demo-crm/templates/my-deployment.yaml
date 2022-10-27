@@ -30,22 +30,3 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: clusterip-demo-crm
-  namespace: default
-  labels:
-    app: demo-crm
-spec:
-  type: ClusterIP
-  selector:
-    app: demo-crm
-  ports:
-  - protocol: TCP
-    name: http
-    port: {{ .Values.servicePort }}
-    targetPort: {{ .Values.demoCrm.appPort }}
