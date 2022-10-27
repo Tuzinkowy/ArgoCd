@@ -22,7 +22,7 @@ spec:
         - containerPort: 3000
         envFrom:
           - configMapRef:
-              name: configmap
+              name: demo-configmap
         resources:
           requests:
             memory: "64Mi"
