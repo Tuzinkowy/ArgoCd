@@ -19,9 +19,9 @@ spec:
         image: {{ .Values.demoCrm.imageName }}:{{ .Values.demoCrm.imageTag }}
         ports:
         - containerPort: {{ .Values.demoCrm.appPort }}
-        envFrom:
-          - configMapRef:
-              name: demo-configmap
+#        envFrom:
+#          - configMapRef:
+#              name: demo-configmap
         resources:
           requests:
             memory: "64Mi"
