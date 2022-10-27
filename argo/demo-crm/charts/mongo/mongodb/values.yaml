@@ -130,7 +130,7 @@ image:
 schedulerName: ""
 ## @param architecture MongoDB(&reg;) architecture (`standalone` or `replicaset`)
 ##
-architecture: standalone
+architecture: replicaset
 ## @param useStatefulSet Set to true to use a StatefulSet instead of a Deployment (only when `architecture=standalone`)
 ##
 useStatefulSet: false
@@ -147,7 +147,7 @@ auth:
   ## @param auth.rootPassword MongoDB(&reg;) root password
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mongodb#setting-the-root-user-and-password-on-first-run
   ##
-  rootPassword: ""
+  rootPassword: "root"
   ## MongoDB(&reg;) custom users and databases
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mongodb#creating-a-user-and-database-on-first-run
   ## @param auth.usernames List of custom users to be created during the initialization
@@ -553,7 +553,7 @@ readinessProbe:
   enabled: true
   initialDelaySeconds: 5
   periodSeconds: 10
-  timeoutSeconds: 5
+  timeoutSeconds: 20
   failureThreshold: 6
   successThreshold: 1
 ## Slow starting containers can be protected through startup probes
@@ -765,13 +765,13 @@ externalAccess:
     resources:
       ## Example:
       ## limits:
-      ##    cpu: 100m
-      ##    memory: 128Mi
+      ##    cpu: 200m
+      ##    memory: 64Mi
       ##
       limits: {}
       ## Examples:
       ## requests:
-      ##    cpu: 100m
+      ##    cpu: 200m
       ##    memory: 128Mi
       ##
       requests: {}
