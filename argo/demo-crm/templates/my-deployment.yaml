@@ -4,7 +4,7 @@ metadata:
   name: demo-crm
   namespace: default
   labels:
-    app: demo-crem
+    app: demo-crm
 spec:
   replicas: 2
   selector:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: demo-crm
-        image: pwstaging/demo-crm:latest
+        image: pwstaging/demo-crm
         ports:
         - containerPort: 3000
         envFrom:
