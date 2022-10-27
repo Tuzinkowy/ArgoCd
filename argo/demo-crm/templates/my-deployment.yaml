@@ -5,7 +5,7 @@ metadata:
   labels:
     app: demo-crem
 spec:
-  replicas: {{ .Values.demoCrm.replicasCount }}
+  replicas: 2
   selector:
     matchLabels:
       app: demo-crm
