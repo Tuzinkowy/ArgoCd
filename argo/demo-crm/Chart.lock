@@ -1,6 +1,0 @@
-dependencies:
-- name: mongodb
-  repository: file://charts/mongodb
-  version: 13.1.7
-digest: sha256:9eefa5b74b6e57e05228af85c08b544e237ada7419ad46938792ace5de94fd94
-generated: "2022-10-27T12:14:59.322545213+02:00"
