@@ -21,7 +21,7 @@ spec:
         - containerPort: {{ .Values.demoCrm.appPort }}
         envFrom:
           - configMapRef:
-              name: configmap
+              name: demo-configmap
         resources:
           requests:
             memory: "64Mi"
