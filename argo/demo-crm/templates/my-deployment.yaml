@@ -1,32 +1,17 @@
-apiVersion: apps/v1
-kind: Deployment
+
+apiVersion: v1
+kind: Service
 metadata:
-  name: demo-crm
+  name: clusterip-demo-crm
   namespace: default
   labels:
     app: demo-crm
 spec:
-  replicas: {{ .Values.demoCrm.replicasCount }}
+  type: ClusterIP
   selector:
-    matchLabels:
-      app: demo-crm
-  template:
-    metadata:
-      labels:
-        app: demo-crm
-    spec:
-      containers:
-      - name: demo-crm
-        image: {{ .Values.demoCrm.imageName }}:{{ .Values.demoCrm.imageTag }}
-        ports:
-        - containerPort: {{ .Values.demoCrm.appPort }}
-        envFrom:
-          - configMapRef:
-              name: demo-configmap
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+    app: demo-crm
+  ports:
+  - protocol: TCP
+    name: http
+    port: {{ .Values.servicePort }}
+    targetPort: {{ .Values.demoCrm.appPort }}
