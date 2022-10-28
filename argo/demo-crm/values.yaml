@@ -1,14 +1,3 @@
-email: marcin.wcale.nie@gmial.com
-dnsName: ironcow.ddns.net
-
-mongodb:
-  user: root
-  password: Marcin7443
-  architecture: replicaset
-  rootPassword: Marcin7443
-  replicaCount: 3
-  
-
 demoCrm:
   replicasCount: 2
   imageName: pwstaging/demo-crm
@@ -18,3 +7,10 @@ demoCrm:
 service:
   servicePort: 80
   appPort: 3000
+
+mongodb:
+  user: root
+  password: Marcin7443
+  architecture: replicaset
+  rootPassword: Marcin7443
+  replicaCount: 3
