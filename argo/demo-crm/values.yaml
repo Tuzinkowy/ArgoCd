@@ -11,9 +11,9 @@ mongodb:
   replicaCount: 3
   
 
-demoCrm:
-  imageName: "pwstaging/demo-crm"
-  imageTag: "latest"
-  replicasCount: 2
-  appPort: 3000
+
+imageName: "pwstaging/demo-crm"
+imageTag: "latest"
+replicasCount: 2
+appPort: 3000
 
