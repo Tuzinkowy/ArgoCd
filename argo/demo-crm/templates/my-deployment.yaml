@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: demo-crm
   labels:
-    app: demo-crem
+    app: demo-crm
 spec:
   replicas: {{ .Values.demo-crm.replicasCount }}
   selector:
