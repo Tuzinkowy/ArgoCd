@@ -5,7 +5,7 @@ metadata:
   labels:
     app: demo-crm
 spec:
-  replicas: {{ .Values.demo-crm.replicasCount }}
+  replicas: 2
   selector:
     matchLabels:
       app: demo-crm
@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: demo-crm
-        image: {{ .Values.demo-crm.imageName }}:{{ .Values.demo-crm.imageTag }}
+        image: pwstaging/demo-crm:latest
         ports:
-        - containerPort: {{ .Values.demo-crm.appPort }}
+        - containerPort: 3000
         envFrom:
           - configMapRef:
               name: configmap
