@@ -49,3 +49,14 @@ Selector labels
 app.kubernetes.io/name: {{ include "demo-crm.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "demo-crm.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "demo-crm.fullname" .) .Values.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}
+{{- end }}
+{{- end }}
