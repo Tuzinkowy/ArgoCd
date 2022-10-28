@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: clusterip-demo-crm
+  name: {{ include "demo-crm.fullname" . }}
   labels:
-    app: demo-crm
+    {{- include "demo-crm.labels" . | nindent 4 }}
 spec:
-  type: LoadBalancer
-  selector:
-    app: demo-crm
+  type: {{ if .Values.ingress.enabled }}ClusterIP{{ else }}{{ .Values.service.type }}{{ end }}
   ports:
-  - protocol: TCP
-    name: http
-    port: {{ .Values.service.servicePort }}
-    targetPort: {{ .Values.service.appPort }}
+  - port: {{ .Values.service.port }}
+    targetPort: app
+    protocol: TCP
+    name: app
+  selector:
+    {{- include "demo-crm.selectorLabels" . | nindent 4 }}
