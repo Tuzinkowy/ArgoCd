@@ -1,9 +1,0 @@
-configmap:
-  user: root
-  password: Marcin7443
-
-demo-crm:
-  replicasCount: 2
-  imageName: pwstaging/demo-crm
-  imageTag: latest
-  appPort: 3000
