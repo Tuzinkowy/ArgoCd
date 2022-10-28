@@ -1,3 +1,8 @@
+configmap:
+  user: root
+  password: Marcin7443
+
+
 demoCrm:
   replicasCount: 2
   imageName: pwstaging/demo-crm
@@ -9,8 +14,6 @@ service:
   appPort: 3000
 
 mongodb:
-  user: root
-  password: Marcin7443
   architecture: replicaset
   rootPassword: Marcin7443
   replicaCount: 3
