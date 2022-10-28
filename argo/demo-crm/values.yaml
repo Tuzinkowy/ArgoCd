@@ -1,19 +1,20 @@
-email: "marcin.wcale.nie@gmial.com"
-dnsName: "ironcow.ddns.net"
-
-servicePort: 80
+email: marcin.wcale.nie@gmial.com
+dnsName: ironcow.ddns.net
 
 mongodb:
-  user: "root"
-  password: "Marcin7443"
-  architecture: "replicaset"
-  rootPassword: "Marcin7443"
+  user: root
+  password: Marcin7443
+  architecture: replicaset
+  rootPassword: Marcin7443
   replicaCount: 3
   
 
 demoCrm:
+  replicasCount: 2
   imageName: pwstaging/demo-crm
   imageTag: latest
-  replicasCount: 2
   appPort: 3000
 
+service:
+  servicePort: 80
+  appPort: 3000
