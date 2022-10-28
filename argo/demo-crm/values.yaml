@@ -1,6 +1,7 @@
 demoCrm:
   replicasCount: 2
   imageName: pwstaging/demo-crm
+  imageTag: latest
   appPort: 3000
 
 service:
@@ -13,3 +14,6 @@ mongodb:
   architecture: replicaset
   rootPassword: Marcin7443
   replicaCount: 3
+
+email: marcin.wcale.nie@gmial.com
+dnsName: ironcow.ddns.net

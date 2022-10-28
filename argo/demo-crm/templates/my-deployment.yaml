@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: demo-crm
-        image: {{ .Values.demoCrm.imageName }}
+        image: pwstaging/demo-crm
         ports:
-        - containerPort: {{ .Values.demoCrm.appPort }}
+        - containerPort: 3000
         envFrom:
           - configMapRef:
               name: demo-configmap
@@ -47,5 +47,5 @@ spec:
   ports:
   - protocol: TCP
     name: http
-    port: {{ .Values.service.servicePort }}
-    targetPort: {{ .Values.service.appPort }}
+    port: 80
+    targetPort: 3000
