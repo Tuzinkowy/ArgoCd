@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: demo-crm
-        image: {{ .Values.demoCrm.imageName }}:{{ .Values.demoCrm.imageTag }}
+        image: {{ .Values.demoCrm.imageName }}
         ports:
         - containerPort: {{ .Values.demoCrm.appPort }}
         envFrom:
