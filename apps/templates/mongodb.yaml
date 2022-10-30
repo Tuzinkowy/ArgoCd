@@ -11,6 +11,9 @@ spec:
     namespace: default
   project: default
   source:
+    helm:
+      valueFiles:
+        - values.yaml
     chart: mongodb
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 13.3.0
