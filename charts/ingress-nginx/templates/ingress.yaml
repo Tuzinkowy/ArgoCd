@@ -5,15 +5,10 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
   name: demo
 spec:
-  tls:
-  - hosts:
-    - ironcow.ddns.net
-    secretName: example-app-tls
   rules:
-  - host: ironcow.ddns.net
-    http:
+  - http:
       paths:
-      - path: /argo
+      - path: /
         pathType: Prefix
         backend:
           service: 
