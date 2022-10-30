@@ -1,9 +1,0 @@
-demoCrm:
-  replicasCount: 2
-  imageName: pwstaging/demo-crm
-  imageTag: latest
-  appPort: 3000
-
-service:
-  servicePort: 80
-  appPort: 3000
