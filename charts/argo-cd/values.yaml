@@ -10,6 +10,3 @@ argo-cd:
           name: argo-cd
           url: https://argoproj.github.io/argo-helm
 
-mongodb:
-  architecture: replicaset
-  replicaCount: 3

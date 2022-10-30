@@ -11,15 +11,9 @@ spec:
     namespace: default
   project: default
   source:
-    helm:
-      parameters:
-        - name: architecture
-          value: "replicaset"
-        - name: replicaCount
-          value: "3"
-    chart: mongodb
-    repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 13.3.0
+    path: charts/mongodb
+    repoURL: https://github.com/Tuzinkowy/ArgoCd.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
