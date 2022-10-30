@@ -12,9 +12,9 @@ spec:
   project: default
   source:
     helm:
-      valueFiles:
-        - values.yaml
-    path: charts/argo-cd
+      parameters:
+        - name: architecture
+          value: "replicaset"
     chart: mongodb
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 13.3.0
