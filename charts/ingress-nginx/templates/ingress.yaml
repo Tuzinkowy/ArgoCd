@@ -6,7 +6,6 @@ metadata:
   name: demo
 spec:
   rules:
-  - host: ironcow.ddns.net
     http:
       paths:
       - path: /argo
