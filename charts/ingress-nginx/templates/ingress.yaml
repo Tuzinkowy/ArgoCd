@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+  name: demo
+spec:
+  tls:
+  - hosts:
+    - ironcow.ddns.net
+    secretName: example-app-tls
+  rules:
+  - host: ironcow.ddns.net
+    http:
+      paths:
+      - path: /argo
+        pathType: Prefix
+        backend:
+          service: 
+            name: argo-cd-argocd-server
+            port: 
+              number: 80
+      - path: /demo
+        pathType: Prefix
+        backend:
+          service:
+            name: clusterip-demo-crm
+            port:
+              numbre: 80
