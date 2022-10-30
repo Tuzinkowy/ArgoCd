@@ -13,6 +13,6 @@ spec:
             image: mongo
             command: ["/bin/sh","-c"]
             args:
-            - mongosh --host "demo-crm-mongodb-headless" --username "root" -p "password" --eval "db.clients.drop()"
+            - mongosh --host "mongodb-headless" --username "root" -p "password" --eval "db.clients.drop()"
           restartPolicy: OnFailure
 
