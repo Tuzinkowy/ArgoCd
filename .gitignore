@@ -1,2 +1,3 @@
 charts/argo-cd/charts/argo-cd-5.8.5.tgz
 charts/mongodb/charts/mongodb-13.3.0.tgz
+charts/cert-menager/charts/cert-manager-v1.10.0.tgz
