@@ -3,9 +3,10 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
-  name: demo
+  name: argo
 spec:
   rules:
+  - host: ironcow.ddns.net
     http:
       paths:
       - path: /
