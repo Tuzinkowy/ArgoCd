@@ -15,7 +15,7 @@ spec:
       parameters:
         - name: architecture
           value: "replicaset"
-        - name: replicaSet
+        - name: replicaCount
           value: 3
     chart: mongodb
     repoURL: https://charts.bitnami.com/bitnami
