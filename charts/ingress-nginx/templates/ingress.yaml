@@ -9,7 +9,7 @@ spec:
   - host: ironcow.ddns.net
     http:
       paths:
-      - path: /argo-cd
+      - path: /
         pathType: Prefix
         backend:
           service: 
