@@ -19,11 +19,4 @@ spec:
           service: 
             name: argo-cd-argocd-server
             port: 
-              number: 80
-      - path: /demo
-        pathType: Prefix
-        backend:
-          service:
-            name: clusterip-demo-crm
-            port:
-              numbre: 80
+              number: 443
