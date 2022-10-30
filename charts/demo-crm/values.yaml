@@ -7,13 +7,3 @@ demoCrm:
 service:
   servicePort: 80
   appPort: 3000
-
-mongodb:
-  user: root
-  password: Marcin7443
-  architecture: replicaset
-  rootPassword: Marcin7443
-  replicaCount: 3
-
-email: marcin.wcale.nie@gmial.com
-dnsName: ironcow.ddns.net
