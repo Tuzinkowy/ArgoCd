@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: clear
+spec:
+  schedule: "* 0 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: clear
+            image: mongo
+            command: ["/bin/sh","-c"]
+            args:
+            - mongosh --host "demo-crm-mongodb-headless" --username "root" -p "password" --eval "db.clients.drop()"
+          restartPolicy: OnFailure
+
