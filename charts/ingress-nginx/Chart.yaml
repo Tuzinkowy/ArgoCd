@@ -1,0 +1,7 @@
+apiVersion: v2
+name: argo-cd
+version: 1.0.0
+dependencies:
+  - name: nginx-ingress
+    version: 0.15.1
+    repository: https://helm.nginx.com/stable
